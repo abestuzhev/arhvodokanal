@@ -22,6 +22,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
     <script src="template.js" charset="utf-8"></script>
+    <script src="plugin/jquery.mask.min.js" charset="utf-8"></script>
     <script src="online-pay.js" charset="utf-8"></script>
 
     <!--
@@ -719,56 +720,58 @@
         <!-- START new form -->
         <div class="online-pay">
             <div class="online-data">
-                <div class="online-data__left">
-                    <div class="online-data__gvs">
-                        <div class="online-data__col">ГВС</div>
-                        <div class="online-data__col">
-                            <div class="online-data__title">Прошлые показания</div>
-                            <div class="online-data__value" id="last-value__gvs">34</div>
+                <form class="online-pay__form">
+                    <div class="online-data__grid">
+                        <div class="online-data__left">
+                            <div class="online-pay__title">Показания счётчиков</div>
+                            <div class="online-data__gvs">
+                                <div class="online-data__col">ГВС</div>
+                                <div class="online-data__col">
+                                    <div class="online-data__sub-title">Прошлые показания</div>
+                                    <div class="online-data__value" id="last-value__gvs">34</div>
+                                </div>
+                                <div class="online-data__col">
+                                    <div class="online-data__sub-title">Текущие<span class="obligatory-field">*</span></div>
+                                    <input class="personal-account__input" type="text" name="personal-gvs" id="personal-gvs" autofocus maxlength="3" required>
+                                </div>
+                            </div>
+                            <div class="online-data__hvs">
+                                <div class="online-data__col">ХВС</div>
+                                <div class="online-data__col">
+                                    <div class="online-data__sub-title">Прошлые показания</div>
+                                    <div class="online-data__value" id="last-value__hvs">34</div>
+                                </div>
+                                <div class="online-data__col">
+                                    <div class="online-data__sub-title">Текущие<span class="obligatory-field">*</span></div>
+                                    <input class="personal-account__input" type="text" name="personal-hvs" id="personal-hvs" maxlength="3" required>
+                                </div>
+                            </div>
+                            <div class="online-data__sum">
+                                <div class="online-data__sum-title">Расчет стоимости: </div>
+                                <div class="online-data__sum-number">650 <span>руб.</span></div>
+                            </div>
                         </div>
-                        <div class="online-data__col">
-                            <div class="online-data__title">Текущие</div>
-                            <input class="personal-account__input" type="text" name="personal-account" id="personal-account" autofocus maxlength="3" required>
+                        <div class="online-data__right">
+                            <div class="online-pay__title">Оплата банковской картой</div>
+                            <div class="online-pay__item">
+                                <label class="online-data__sub-title" for="personal-pay__account">Номер лицевого счета:</label>
+                                <input class="personal-account__input" type="text" name="personal-account" id="personal-pay__account" minlength="6" maxlength="6">
+                            </div>
+                            <div class="online-pay__item">
+                                <label class="online-data__sub-title" for="personal-pay__sum">Сумма оплаты:</label>
+                                <input class="personal-account__input" type="text" name="personal-account" id="personal-pay__sum" maxlength="5">
+                            </div>
+                            <div class="online-pay__item online-pay__icons">
+                                <div class="online-pay__icon online-pay__icon--visa"><img src="./assets/img/logo-visa.svg" alt=""></div>
+                                <div class="online-pay__icon online-pay__icon--mastercard"><img src="./assets/img/logo-mastercard.svg" alt=""></div>
+                                <div class="online-pay__icon online-pay__icon--mir"><img src="./assets/img/logo-mir.svg" alt=""></div>
+                                <div style="margin-top: 10px; font-size: 14px; color: #424242;"><span class="obligatory-field">*</span> Обязательное поле</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="online-data__hvs">
-                        <div class="online-data__col">ХВС</div>
-                        <div class="online-data__col">
-                            <div class="online-data__title">Прошлые показания</div>
-                            <div class="online-data__value" id="last-value__hvs">34</div>
-                        </div>
-                        <div class="online-data__col">
-                            <div class="online-data__title">Текущие</div>
-                            <input class="personal-account__input" type="text" name="personal-account" id="personal-account" autofocus maxlength="3" required>
-                        </div>
-                    </div>
-                </div>
-                <!--<div class="online-data__right">-->
-                    <!--<div class="online-data__sum">-->
-                        <!--<div class="online-data__sum-title">Расчет стоимости</div>-->
-                        <!--<div class="online-data__sum-number">650 <span>руб.</span></div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            </div>
-
-            <form class="online-pay__form">
-                <div class="online-pay__title">Оплата банковской картой</div>
-                <div class="online-pay__item">
-                    <label class="personal-accoun__title" for="personal-account">Номер лицевого счета:</label>
-                    <input class="personal-account__input" type="text" name="personal-account" id="personal-account" autofocus maxlength="3" required>
-                </div>
-                <div class="online-pay__item">
-                    <label class="personal-accoun__title" for="personal-account">Сумма оплаты:</label>
-                    <input class="personal-account__input" type="text" name="personal-account" id="personal-account" autofocus maxlength="3" required>
-                </div>
-                <div class="online-pay__item">
                     <button class="personal-account__btn disabled">Передать показания</button>
-                </div>
-                <div class="online-data__sum">
-                    <div class="online-data__sum-title">Расчет стоимости</div>
-                    <div class="online-data__sum-number">650 <span>руб.</span></div>
-                </div>
             </form>
+            </div>
         </div>
 
         <!-- END new form -->
