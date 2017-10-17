@@ -1,13 +1,20 @@
 $(function(){
 
-$('.personal-account__form').each(function(){
-  $(':required').on('blur', function() {
-    $(this).parents('.personal-account__item').addClass('error');
-    if($(this).val() != '') {
-        $(this).parents('.personal-account__item').removeClass('error');
-      }
-  })
-});
+    /*функция проверки на заполненность поля в real -time */
+    function validRealTime (form, item){
+        $(form).each(function(){
+            $(':required').on('blur', function() {
+                $(this).parents(item).addClass('error');
+                if($(this).val() != '') {
+                    $(this).parents(item).removeClass('error');
+                }
+            })
+        });
+    }
+
+    validRealTime('.personal-account__form', '.personal-account__item');
+    validRealTime('.online-pay__form', '.online-pay__item');
+
 
 $('#personal-account').on('focus', function(){
     $('.personal-reference > div').removeClass('personal-reference__active');
@@ -28,13 +35,59 @@ $('#personal-account, #personal-phone, #personal-email').on('blur', function(){
     $('.personal-reference > div').removeClass('personal-reference__active');
 });
 
-/*mask*/
 
-$('#personal-account').mask('0000000');
-$('#personal-phone').mask('+7(000)000-00-00');
-$('#personal-room').mask('000');
-$('#personal-gvs').mask('000');
-$('#personal-hvs').mask('000');
+
+/*Disable на кнопку отправки при не согласии на обработку персональных данных*/
+$(".personal-account form input[type='checkbox']").on('change', function(){
+    if($('#personal-check').prop('checked')){
+        $(".personal-account .personal-account__btn").removeAttr('disabled');
+    }else {
+        $(".personal-account .personal-account__btn").attr('disabled', 'disabled');
+    }
+});
+
+
+    /*mask*/
+    $('#personal-account').mask('0000000000');
+    $('#personal-phone').mask('+7(000)000-00-00');
+    $('#personal-room').mask('000');
+    $('#personal-gvs').mask('000');
+    $('#personal-hvs').mask('000');
+
+    /*страница оплаты*/
+    $('#personal-pay__account').mask('0000000000');
+    $('#personal-pay__sum').mask('000000');
+
+
+    /*расчет показаний  вода */
+
+    // function getResult(valuePlace){
+    //
+    //     var lastValueGvs = parseInt($('#last-value__gvs').text());
+    //     console.log(lastValueGvs);
+    //     var lastValueHvs = parseInt($('#last-value__hvs').text());
+    //     console.log(lastValueHvs);
+    //
+    //     var gvsTariff = 1.20;
+    //     var hvsTariff = 1;
+    //
+    //
+    //     var personalHvs = parseInt($('#personal-gvs').val());
+    //
+    //
+    //     $('#personal-hvs').on('change', function(){
+    //         var personalGvs = parseInt($(this).val());
+    //         console.log(personalGvs);
+    //     });
+    //
+    //
+    // }
+
+
+
+
+
+
 
 });
 
@@ -66,7 +119,7 @@ $(function() {
 
           // Функция подсветки незаполненных полей
           function lightEmpty(){
-              form.find('.empty_field').css({'border-color':'#d8512d'});
+              form.find('.empty_field').css({'border-color':'#b2001b', 'box-shadow': '0px 0px 10px 0px rgba(230,0,0,0.5)'});
               // Через полсекунды удаляем подсветку
               setTimeout(function(){
                   form.find('.empty_field').removeAttr('style');

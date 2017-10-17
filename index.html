@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Список страниц Волоканал</title>
+    <title>Cписок страниц Водоканал</title>
     <link rel="shortcut icon" href="favicon.png">
     <!--[if lt IE 10]><script src="js/IE9.js"></script><![endif]-->
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
-
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <style>
     html { min-height: 100%; }
@@ -18,9 +19,10 @@
         padding: 0;
         margin: 0;
         min-height: 100%;
-        background: url('img/bg.jpg') repeat 0 0;
+        background: url('bitrix/templates/mediartstore/images/bg.jpg') repeat 0 0;
         background-size: cover;
         font: 16px/32px 'Roboto', sans-serif;
+        overflow: hidden;
     }
 
     h1 {
@@ -43,7 +45,9 @@
       padding-left: 25px;
       color: #292929;
       font-size: 1em;
-        margin: 0;
+      margin: 0;
+      line-height: 1.2;
+      margin-bottom: 10px;
     }
 
     .corrected::before {
@@ -76,6 +80,22 @@
         border-radius: 6px;
     }
 
+    @media screen and (max-width: 700px) {
+      section {
+        width: 100%;
+        padding: 10px;
+        max-width: none;
+      }
+
+      .item {
+        padding: 0;
+      }
+
+    body {
+        background: none;
+    }
+    }
+
     a {
         text-decoration: none;
         color: #292929;
@@ -90,13 +110,15 @@
 
 <section>
 
-    <!--<h1>Мобильная версия Петромост.рф</h1>-->
-    <h1>Волоканал</h1>
+    <h1>Водоканал</h1>
 
     <ol>
-        <li class="item"><a href="home.html">Передача показаний приборов учёта. Страница 1</a></li>
-        <li class="item"><a href="data.html">Передача показаний приборов учёта. Страница 2</a></li>
+        <li class="item"><a href="choice.html" target="_blank">Страница выбора</a></li>
+        <li class="item"><a href="personal.html" target="_blank">Заполнение персональных данных</a></li>
+        <li class="item"><a href="value.html" target="_blank">Страница ввода показаний</a></li>
+        <li class="item"><a href="pay.html" target="_blank">Страница оплаты</a></li>
     </ol>
+  <!--<a href="components.html">Компоненты</a>-->
 </section>
 
 </body>

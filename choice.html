@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Стоимость подключения водоснабжения</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="МУП Водоканал, Муниципального Образования Город Архангельск. Поставка воды для населения.">
+    <link href="style-template.css" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="online-pay.css" type="text/css" data-template-style="true" rel="stylesheet">
+    <!-- <script type="text/javascript" src="/bitrix/cache/js/s1/vodokanal_main/kernel_twim.recaptchafree/kernel_twim.recaptchafree.js?15078780684685"></script> -->
+    <!-- <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?onload=onloadRecaptchafree&render=explicit&hl=ru"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9wQUiVjBL7O2j_2jt-pBhrb3Sp1xL9tg"></script> -->
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>-->
+    <script src="template.js" charset="utf-8"></script>
+    <script src="plugin/jquery.mask.min.js" charset="utf-8"></script>
+    <script src="online-pay.js" charset="utf-8"></script>
+
+    <!--
+    <script type="text/javascript" src="/bitrix/cache/js/s1/vodokanal_main/template_aa9ee65081401e08c58e4b73e5dec9e4/template_aa9ee65081401e08c58e4b73e5dec9e4.js?1507878068230542"></script>
+    <script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "aa03df1842481a1bb180ed1c83864216"]); _ba.push(["host", "arhvodokanal.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+     -->
+
+
+</head>
+<body>
+
+<!-- No script warning -->
+<noscript>
+    <div id="noScriptWarning">
+        К сожалению, ваш браузер <strong>не поддерживает</strong> JavaScript. Пожалуйста,
+        <a href="http://browsehappy.com/" target="_blank" rel="nofollow">обновите</a> ваш браузер или включите поддержку JavaScript для корректного отображения страницы.
+    </div>
+</noscript>
+
+<!-- Outdated browser warning --><!--[if lte IE 10]>
+<div id="outdatedBrowserWarning">
+    Вы используете <strong>устаревший</strong> браузер. Пожалуйста,
+    <a href="http://browsehappy.com/" target="_blank" rel="nofollow">обновите</a> ваш браузер для корректного отображения страницы.
+</div><![endif]-->
+
+
+<header class="header">
+    <div class="container">
+        <div class="header_top">
+            <div class="header_logo_left header_logo">
+                <a href="/"><img src="./assets/img/logo-vodokanal-header.png" alt="Водоканал"></a>
+            </div>
+
+            <div class="header_logo_right header_logo">
+                <a href="/"><img src="./assets/img/logo-vodoochistka-header.png" alt="Водоочистка"></a>
+            </div>
+
+            <div class="header_links clearfix">
+                <a href="/search/" class="search" title="Поиск"></a>
+                <a href="/?siteType=cecutient" class="eye" title=""></a>
+                <a href="#authorization_popup" class="account" title="Личный кабинет"></a>
+            </div>
+        </div>
+
+        <!-- Меню -->
+
+
+        <div class="header_nav">
+            <a id="mobile-link" class="mobile-link" href="#mobile-nav"></a>
+            <nav id="mobile-nav" class="nav">
+
+                <ul>
+
+
+                    <li></li>
+                    <li><a href="/">Главная</a></li>
+
+
+                    <li></li>
+                    <li class="dropdown">
+                        <a class="dropdown-button" href="/o-predpriyatii/"> <span>о предприятии</span> </a>
+                        <div class="dropdown-content">
+                            <ul>
+
+
+                                <li><a href="/o-predpriyatii/istoriya-mup-vodokanal/">История МУП «Водоканал»</a></li>
+
+
+                                <li>
+                                    <a href="/o-predpriyatii/prioritetnye-napravleniya-deyatelnosti/">Приоритетные направления</a>
+                                </li>
+
+
+                                <li><a href="/o-predpriyatii/priyemnaya-direktora/">Приёмная директора</a></li>
+
+
+                                <li><a href="/o-predpriyatii/protivodeystvie-korruptsii/">Противодействие коррупции</a>
+                                </li>
+
+
+                                <li><a href="/o-predpriyatii/normativnye-dokumenty/">Нормативные документы</a></li>
+
+
+                                <li><a href="/o-predpriyatii/vakansii/">Вакансии</a></li>
+
+
+                                <li><a href="/o-predpriyatii/kontakty/">Контакты</a></li>
+
+
+                                <li><a href="/o-predpriyatii/novosti/">Новости</a></li>
+
+
+                                <li><a href="/o-predpriyatii/struktura-i-rukovodstvo"></a></li>
+
+
+                                <li><a href="/o-predpriyatii/doska-pocheta">Доска почета</a></li>
+
+
+                                <li>
+                                    <a href="/o-predpriyatii/o-realizatsii-prioritetnykh-napravleniy-v-2017/">Реализация приоритетных направлений 2017</a>
+                                </li>
+
+
+                                <li><a href="/o-predpriyatii/samovolnye-podklyucheniya/">Самовольные подключения</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li></li>
+                    <li class="dropdown">
+                        <a class="dropdown-button" href="/fizicheskim-litsam/"> <span>Физическим лицам</span> </a>
+                        <div class="dropdown-content">
+                            <ul>
+
+
+                                <li><a href="/fizicheskim-litsam/schetchiki/">Счетчики</a></li>
+
+
+                                <li>
+                                    <a style="font-weight: bold;font-style: italic" href="/fizicheskim-litsam/oplombirovka-priborov-ucheta/">Опломбировка приборов учета</a>
+                                </li>
+
+
+                                <li>
+                                    <a href="/fizicheskim-litsam/tekhnicheskie-trebovaniya-k-uu-vody-dlya-chs/">ТУ к узлам учета для частного сектора</a>
+                                </li>
+
+
+                                <li><a href="/fizicheskim-litsam/dokumenty-podklyuchenie/">Подключение к сетям</a></li>
+
+
+                                <li><a href="/fizicheskim-litsam/tarify/">Тарифы</a></li>
+
+
+                                <li>
+                                    <a href="/fizicheskim-litsam/obraztsy-dogovorov-i-zayavleniy/">Образцы договоров и заявлений</a>
+                                </li>
+
+
+                                <li><a href="/vopros-otvet/">Частые вопросы</a></li>
+
+
+                                <li><a href="/fizicheskim-litsam/zayavka-na-ipu/">Заявка на ИПУ</a></li>
+
+
+                                <li><a href="/fizicheskim-litsam/oplata/">Оплата</a></li>
+
+
+                                <li>
+                                    <a href="/fizicheskim-litsam/stoimost-podklyucheniya-vodosnabzheniya/">Стоимость подключения водоснабжения</a>
+                                </li>
+
+
+                                <li>
+                                    <a href="/fizicheskim-litsam/stoimost-podklyucheniya-vodootvedeniya/">Стоимость подключения водоотведения</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li></li>
+                    <li class="dropdown">
+                        <a class="dropdown-button" href="/yuridicheskim-litsam/"> <span>Юридическим лицам</span> </a>
+                        <div class="dropdown-content">
+                            <ul>
+
+
+                                <li><a href="/yuridicheskim-litsam/schetchiki/">Счетчики</a></li>
+
+
+                                <li>
+                                    <a style="font-weight: bold;font-style: italic" href="/yuridicheskim-litsam/oplombirovka-priborov-ucheta/">Опломбировка приборов учета</a>
+                                </li>
+
+
+                                <li><a href="/yuridicheskim-litsam/tu-k-uzlam-ucheta-vody/">ТУ к узлам учета воды</a>
+                                </li>
+
+
+                                <li><a href="/yuridicheskim-litsam/dokumenty-podklyuchenie/">Подключение к сетям</a>
+                                </li>
+
+
+                                <li><a href="/yuridicheskim-litsam/tarify/">Тарифы</a></li>
+
+
+                                <li>
+                                    <a href="/yuridicheskim-litsam/obraztsy-dogovorov-i-zayavleniy/">Образцы договоров и заявлений</a>
+                                </li>
+
+
+                                <li><a href="/vopros-otvet/yuridicheskie-litsa/">Частые вопросы</a></li>
+
+
+                                <li>
+                                    <a href="/yuridicheskim-litsam/dogovory-na-vodu-i-stoki/">Договоры на воду и стоки</a>
+                                </li>
+
+
+                                <li><a href="/yuridicheskim-litsam/oplata/">Оплата</a></li>
+
+
+                                <li>
+                                    <a href="/yuridicheskim-litsam/stoimost-podklyucheniya-vodosnabzheniya/">Стоимость подключения водоснабжения</a>
+                                </li>
+
+
+                                <li>
+                                    <a href="/yuridicheskim-litsam/stoimost-podklyucheniya-vodootvedeniya/">Стоимость подключения водоотведения</a>
+                                </li>
+
+
+                                <li>
+                                    <a href="/yuridicheskim-litsam/informatsiya-dlya-uk-tszh-tsn/">Информация для УК, ТСЖ, ТСН</a>
+                                </li>
+
+
+                                <li>
+                                    <a href="/yuridicheskim-litsam/grafik-otklyucheniya-dolzhnikov/">График отключения должников</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li></li>
+                    <li class="dropdown">
+                        <a class="dropdown-button" href="/kommercheskie-uslugi/"> <span>Коммерческие услуги</span> </a>
+                        <div class="dropdown-content">
+                            <ul>
+
+
+                                <li>
+                                    <a href="/kommercheskie-uslugi/laboratornye-analizy-vody/">Лабораторные анализы воды</a>
+                                </li>
+
+
+                                <li>
+                                    <a href="/kommercheskie-uslugi/tekhnicheskoe-obsluzhivanie-i-remont-vodoprovodnykh-i-kanalizatsionnykh-setey-i-sooruzheniy/">Строительство и ремонт<br> водопроводных и канализационных сетей</a>
+                                </li>
+
+
+                                <li>
+                                    <a href="/kommercheskie-uslugi/diagnostika-truboprovodov/">Диагностика трубопроводов</a>
+                                </li>
+
+
+                                <li>
+                                    <a href="/kommercheskie-uslugi/ustanovka-priborov-ucheta/">Установка приборов учета</a>
+                                </li>
+
+
+                                <li><a href="/kommercheskie-uslugi/uslugi-ekskavatora/">Услуги экскаватора</a></li>
+
+
+                                <li><a href="/kommercheskie-uslugi/podvoz-vody/">Подвоз воды</a></li>
+
+
+                                <li>
+                                    <a href="/kommercheskie-uslugi/proektirovanie-i-stroitelstvo-uzlov-ucheta-raskhoda-vody/">Проектирование и строительство<br> узлов учета расхода воды</a>
+                                </li>
+
+
+                                <li>
+                                    <a href="/kommercheskie-uslugi/izgotovlenie-metallokonstruktsiy/">Изготовление металлоконструкций</a>
+                                </li>
+
+
+                                <li>
+                                    <a href="/kommercheskie-uslugi/uslugi-spetsializirovannoy-tekhniki/">Услуги специализированной техники</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li></li>
+                    <li class="dropdown">
+                        <a class="dropdown-button" href="/zakupki/"> <span>Закупки</span> </a>
+                        <div class="dropdown-content">
+                            <ul>
+
+
+                                <li><a href="/zakupki/polozhenie-o-zakupkakh/">Положение о закупках</a></li>
+
+
+                                <li><a href="/zakupki/plan-zakupok/">План закупок</a></li>
+
+
+                                <li><a href="/zakupki/protokoly/">Протоколы</a></li>
+
+
+                                <li><a href="/zakupki/kontaktnye-litsa/">Контактные лица</a></li>
+
+
+                                <li><a href="/zakupki/press-tsentr/">Пресс-центр</a></li>
+
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li></li>
+                    <li class="dropdown">
+                        <a class="dropdown-button" href="/press-tsentr/"> <span>Пресс-центр</span> </a>
+                        <div class="dropdown-content">
+                            <ul>
+
+
+                                <li><a href="/press-tsentr/publikatsii-v-smi/">Публикации в СМИ</a></li>
+
+
+                                <li><a href="/press-tsentr/smi-o-nas/">СМИ о нас</a></li>
+
+
+                                <li><a href="/press-tsentr/fotootchety/">Фотоотчеты</a></li>
+
+
+                                <li><a href="/press-tsentr/videootchety/">Видеоотчеты</a></li>
+
+
+                                <li><a href="/press-tsentr/kontakty-dlya-smi/">Контакты для СМИ</a></li>
+
+
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <li></li>
+                    <li><a href="/vopros-otvet/">Вопрос-ответ</a></li>
+
+
+                    <li></li>
+                    <li><a href="/lichnyy-kabinet/">Личный кабинет</a></li>
+
+
+                    <li></li>
+                </ul>
+            </nav>
+
+        </div>
+
+
+    </div>
+</header>
+
+<div class="page_title">
+    <div class="container">
+        <div class="breadcrumbs">
+            <ul>
+                <li id="bx_breadcrumb_0">
+                    <a href="/" title="Главная"> Главная </a>
+                </li>
+                <li id="bx_breadcrumb_1">
+                    <a href="/fizicheskim-litsam/" title="Физическим лицам"> Физическим лицам </a>
+                </li>
+                <li>
+                    Передача показаний приборов учета
+                </li>
+            </ul>
+        </div>
+        <h1 class="title">Передача показаний приборов учета</h1>
+
+        <!-- START new form -->
+        <div class="online-pay">
+            <a href="personal.html" class="personal-account__btn">ПЕРЕДАТЬ ПОКАЗАНИЯ</a>
+            <a href="pay.html" class="personal-account__btn">ПРОИЗВЕСТИ ОПЛАТУ</a>
+        </div>
+
+        <!-- END new form -->
+    </div>
+</div>
+
+<div class="social_fixed">
+    <ul>
+        <li><a href="https://arhvodokanal.ru" class="tw" title="На главную"></a></li>
+        <li><a href="#authorization_popup" class="vk" title="Вход в личный кабинет"></a></li>
+        <li>
+            <a href="https://arhvodokanal.ru/o-predpriyatii/priyemnaya-direktora/" class="fb" title="Приемная директора"></a>
+        </li>
+        <li><a href="https://arhvodokanal.ru/fizicheskim-litsam/zayavka-na-ipu/" class="ig" title="Заявка на ИПУ"></a>
+        </li>
+        <li><a href="/?siteType=cecutient" class="gp" title="Версия для слабовидящих"></a></li>
+        <li><a href="#" class="yt" title="Вверх"></a></li>
+    </ul>
+</div>
+
+<footer class="footer">
+    <div class="container clearfix">
+        <div class="footer_social">
+            <ul class="clearfix">
+                <li><a href="#" class="tw" title="Twitter"></a></li>
+                <li><a href="https://vk.com/arhvodokanal" class="vk" title="ВКонтакте"></a></li>
+                <li><a href="#" class="fb" title="Facebook"></a></li>
+                <li><a href="#" class="ig" title="Instagram"></a></li>
+                <li><a href="#" class="gp" title="Google+"></a></li>
+                <li><a href="#" class="yt" title="YouTube"></a></li>
+            </ul>
+        </div>
+        <div class="footer_logos">
+            <div class="logo">
+                <img src="./assets/img/logo-vodokanal.png" alt="Водоканал">
+            </div>
+            <div class="logo">
+                <img src="./assets/img/logo-vodoochistka.png" alt="Водоочистка">
+            </div>
+        </div>
+        <div class="footer_tu">
+            <a href="http://webtu.ru/"> <img src="./assets/img/logo-tu.png" alt="Технологии успеха"> </a>
+        </div>
+    </div>
+    <div class="footer_copy">
+        <div class="container">
+            <small class="copy">&copy; 2016 Муниципальное Унитарное Предприятие &laquo;Водоканал&raquo; Муниципального образования &laquo;Город Архангельск&raquo;</small>
+        </div>
+    </div>
+</footer>
+
+<div id="authorization_popup" class="white-popup mfp-hide">
+    <h4 class="title">Авторизация в личном кабинете</h4>
+    <div class="form">
+        <form name="logon" id="logon" action="https://cabinet.rc-online.ru/go/logon/show/arch" method="post" target="_blank">
+            <input type="hidden" id="form_logon_submitted" name="form_logon_submitted" value="yes"/>
+            <input type="text" name="e_login" value="" tabindex="1" placeholder="Логин"/>
+            <input type="password" name="e_password" value="" maxlength="100" tabindex="2" placeholder="Пароль"/>
+            <div class="buttons-group clearfix">
+                <a class="registration-button" href="https://cabinet.rc-online.ru/go/logon/show/arch#register">Регистрация</a>
+                <input type="submit" name="In" value="Войти" tabindex="5"/>
+            </div>
+            <a class="forget" href="https://cabinet.rc-online.ru/go/logon/show/arch#recovery">Забыли пароль?</a>
+        </form>
+    </div>
+
+</div>
+
+
+<script>
+
+    var sizeEmptyto =  $('input').lenght;
+    console.log(sizeEmptyto);
+</script>
+
+</body>
+</html>
